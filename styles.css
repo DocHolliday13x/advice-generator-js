@@ -14,15 +14,20 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-family: 'Manrope', sans-serif;
 }
 
 .advice-container h1 {
-  font-size: 10px;
+  color: hsl(150, 100%, 66%);
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .advice-container blockquote {
+  color: hsl(193, 38%, 86%);
   font-size: 28px;
-  font-style: italic;
+  font-style: bold;
+  font-weight: 800;
   text-align: center;
   margin: 1rem 0;
 }
