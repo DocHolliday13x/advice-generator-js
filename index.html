@@ -28,8 +28,10 @@
         const adviceText = advice.advice;
 
         document.body.innerHTML = `
+        <div class="advice-container">
           <h1>Advice #${adviceId}</h1>
           <blockquote>"${adviceText}"</blockquote>
+        </div>
         `;
       })
       .catch(error => console.error(error));
