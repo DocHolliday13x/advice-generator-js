@@ -1,50 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap"
+    />
 
-  
-  <title>Frontend Mentor | Advice generator app</title>
+    <title>Frontend Mentor | Advice generator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
 
-  <script>
-    const ADVICE_URL = 'https://api.adviceslip.com/advice';
+  <body>
+    <div class="advice-container">
+      <h1 class="advice-title"></h1>
+      <blockquote class="advice-text"></blockquote>
+      <svg width="444" height="16" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path fill="#4F5D74" d="M0 8h196v1H0zM248 8h196v1H248z"/><g transform="translate(212)" fill="#CEE3E9"><rect width="6" height="16" rx="3"/><rect x="14" width="6" height="16" rx="3"/></g></g></svg>
+    </div>
 
-    fetch(ADVICE_URL)
-      .then(response => response.json())
-      .then(data => {
-        const advice = data.slip;
-        const adviceId = advice.id;
-        const adviceText = advice.advice;
+    <script>
+      const ADVICE_URL = "https://api.adviceslip.com/advice";
+    
+      fetch(ADVICE_URL)
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        })
+        .then((data) => {
+          const advice = data.slip;
+          const adviceId = advice.id;
+          const adviceText = advice.advice;
 
-        document.body.innerHTML = `
-        <div class="advice-container">
+          const adviceTitle = document.querySelector(".advice-title");
+          adviceTitle.innerHTML = adviceId;
+      
+          const providedAdvice = document.querySelector(".advice-text");
+          providedAdvice.innerHTML = adviceText;
+    
+          //const adviceContainer = document.querySelector(".advice-container");
+          //adviceContainer.innerHTML = `
+            //<h1>Advice #${adviceId}</h1>
+            //<blockquote>"${adviceText}"</blockquote>
+          //`;
+        })
+        .catch((error) => {
+          // Handle errors gracefully
+          console.error('Error:', error);
+        });
+    </script>
+
+    
+    <!-- <script>
+      const ADVICE_URL = "https://api.adviceslip.com/advice";
+
+      fetch(ADVICE_URL)
+        .then((response) => response.json())
+        .then((data) => {
+          const advice = data.slip;
+          const adviceId = advice.id;
+          const adviceText = advice.advice;
+
+          const adviceContainer = document.querySelector(".advice-container");
+          adviceContainer.innerHTML = `
           <h1>Advice #${adviceId}</h1>
           <blockquote>"${adviceText}"</blockquote>
-        </div>
         `;
-      })
-      .catch(error => console.error(error));
+        })
+        .catch((error) => console.error(error));
+    </script> -->
 
-
-
-  </script>
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Ryan Eastman</a>.
-  </div>
-</body>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Ryan Eastman</a>.
+    </div>
+  </body>
 </html>
