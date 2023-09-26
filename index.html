@@ -35,16 +35,28 @@
     <div class="advice-container">
       <h1 class="advice-title"></h1>
       <blockquote class="advice-text"></blockquote>
-      <svg width="444" height="16" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path fill="#4F5D74" d="M0 8h196v1H0zM248 8h196v1H248z"/><g transform="translate(212)" fill="#CEE3E9"><rect width="6" height="16" rx="3"/><rect x="14" width="6" height="16" rx="3"/></g></g></svg>
+      <div class="pattern-divider">
+        <hr>
+        <svg width="444" height="16" xmlns="http://www.w3.org/2000/svg">
+          <g fill="none" fill-rule="evenodd">
+            <path fill="#4F5D74" d="M0 8h196v1H0zM248 8h196v1H248z" />
+            <g transform="translate(212)" fill="#CEE3E9">
+              <rect width="6" height="16" rx="3" />
+              <rect x="14" width="6" height="16" rx="3" />
+            </g>
+          </g>
+        </svg>
+        <hr>
+      </div>
     </div>
 
     <script>
       const ADVICE_URL = "https://api.adviceslip.com/advice";
-    
+
       fetch(ADVICE_URL)
         .then((response) => {
           if (!response.ok) {
-            throw new Error('Network response was not ok');
+            throw new Error("Network response was not ok");
           }
           return response.json();
         })
@@ -55,23 +67,22 @@
 
           const adviceTitle = document.querySelector(".advice-title");
           adviceTitle.innerHTML = adviceId;
-      
+
           const providedAdvice = document.querySelector(".advice-text");
           providedAdvice.innerHTML = adviceText;
-    
+
           //const adviceContainer = document.querySelector(".advice-container");
           //adviceContainer.innerHTML = `
-            //<h1>Advice #${adviceId}</h1>
-            //<blockquote>"${adviceText}"</blockquote>
+          //<h1>Advice #${adviceId}</h1>
+          //<blockquote>"${adviceText}"</blockquote>
           //`;
         })
         .catch((error) => {
           // Handle errors gracefully
-          console.error('Error:', error);
+          console.error("Error:", error);
         });
     </script>
 
-    
     <!-- <script>
       const ADVICE_URL = "https://api.adviceslip.com/advice";
 
