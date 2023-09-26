@@ -16,9 +16,26 @@
 </head>
 <body>
 
-  Advice #<!-- Advice ID goes here -->
+  <script>
+    const ADVICE_URL = 'https://api.adviceslip.com/advice';
 
-  "<!-- Advice text goes here -->"
+    fetch(ADVICE_URL)
+      .then(response => response.json())
+      .then(data => {
+        const advice = data.slip;
+        const adviceId = advice.id;
+        const adviceText = advice.advice;
+
+        document.body.innerHTML = `
+          <h1>Advice #${adviceId}</h1>
+          <blockquote>"${adviceText}"</blockquote>
+        `;
+      })
+      .catch(error => console.error(error));
+
+
+
+  </script>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
