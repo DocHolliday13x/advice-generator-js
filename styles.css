@@ -18,6 +18,14 @@ body {
   max-width: 500px;
   border-radius: 10px;
   padding: 20px;
+  /* margin: 0 auto; */
+  /* margin-left: auto;
+  margin-right: auto; */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -100px;
+  margin-left: -250px;
   font-family: 'Manrope', sans-serif;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   text-align:center;
