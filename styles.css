@@ -59,3 +59,32 @@ body {
   background-color: hsl(217, 19%, 35%);
   margin: 0 10px;
 }
+
+.button {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+}
+
+.svg-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(150, 100%, 66%);
+  color: hsl(218, 23%, 16%);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease;
+}
+
+.svg-button:hover {
+  background-color: hsl(193, 38%, 86%);
+  color: hsl(218, 23%, 16%);
+}
