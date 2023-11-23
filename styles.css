@@ -75,6 +75,30 @@ body {
   box-shadow:hsl(150, 100%, 66%); <-- Was going to add the glow on hover but I can't even get the glow to work at all 
 } */
 
+/* .svg-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(150, 100%, 66%);
+  color: hsl(218, 23%, 16%);
+  border: none;
+  border-radius: 50%; /* Makes the button circular 
+  padding: 10px;
+  cursor: pointer;
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease;
+}
+
+.svg-button:hover {
+  background-color: hsl(113, 89%, 56%);
+  color: hsl(150, 100%, 66%);
+} */
+
+/* adding note to attempt to merge again, but for reals, fuck my fucking life and this fucking career path */
+
 .svg-button {
   display: flex;
   align-items: center;
@@ -90,11 +114,11 @@ body {
   font-weight: 600;
   letter-spacing: 1px;
   transition: background-color 0.3s ease;
+  box-shadow: 0 0 10px hsl(150, 100%, 66%); /* Add box-shadow effect */
 }
 
 .svg-button:hover {
-  background-color: hsl(113, 89%, 56%);
+  background-color: hsl(150, 100%, 66%);
   color: hsl(150, 100%, 66%);
+  box-shadow: 0 0 10px hsl(150, 100%, 66%); /* Update box-shadow effect on hover */
 }
-
-/* adding note to attempt to merge again, but for reals, fuck my fucking life and this fucking career path */
