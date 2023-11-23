@@ -4,24 +4,12 @@ body {
   width: 100vw;
 }
 
-/* main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: hsl(218, 23%, 16%);
-  margin: auto;
-} */
-
 .advice-container {
   background-color: hsl(217, 19%, 38%);
   max-width: 500px;
   border-radius: 10px;
   padding: 20px;
-  /* margin: 0 auto; */
-  /* margin-left: auto;
-  margin-right: auto; */
-  position: absolute;
+  position: relative;
   left: 50%;
   top: 50%;
   margin-top: -100px; /* Half of total height */
@@ -36,7 +24,6 @@ body {
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 2px;
-  
 }
 
 .advice-container blockquote {
@@ -51,53 +38,25 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 20px 0;
+  position: relative;
+  /* Still need to figure out how to make these into lines rather than dots */
 }
 
 .divider {
   width: 100%;
   height: 1px;
-  background-color: hsl(217, 19%, 35%);
-  margin: 0 10px;
+  background-image: linear-gradient(to right, hsl(217, 19%, 35%), hsl(217, 19%, 35%) 2px, transparent 2px);
 }
 
 .button {
   position: absolute;
-  bottom: 20px; /* Position the button at the bottom of the container. Need to adjust the size of container to make button split container and background */
+  bottom: -1; /* Position the button at the bottom of the container. Negative value placed button lower. Value of -1 works perfectly for now.*/
   left: 50%;
-  /* min-height: 100vh; */
   transform: translateX(-50%);
-  box-shadow:hsl(150, 100%, 66%); /* This should make the button glow but it's not working */
+  box-shadow:hsl(150, 100%, 66%);
   transition: all 0.2s ease-in-out;
 }
-
-/* button:hover {
-  background-color: hsl(150, 100%, 66%);
-  box-shadow:hsl(150, 100%, 66%); <-- Was going to add the glow on hover but I can't even get the glow to work at all 
-} */
-
-/* .svg-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: hsl(150, 100%, 66%);
-  color: hsl(218, 23%, 16%);
-  border: none;
-  border-radius: 50%; /* Makes the button circular 
-  padding: 10px;
-  cursor: pointer;
-  font-family: 'Manrope', sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  transition: background-color 0.3s ease;
-}
-
-.svg-button:hover {
-  background-color: hsl(113, 89%, 56%);
-  color: hsl(150, 100%, 66%);
-} */
-
-/* adding note to attempt to merge again, but for reals, fuck my fucking life and this fucking career path */
 
 .svg-button {
   display: flex;
@@ -117,8 +76,4 @@ body {
   box-shadow: 0 0 10px hsl(150, 100%, 66%); /* Add box-shadow effect */
 }
 
-.svg-button:hover {
-  background-color: hsl(150, 100%, 66%);
-  color: hsl(150, 100%, 66%);
-  box-shadow: 0 0 10px hsl(150, 100%, 66%); /* Update box-shadow effect on hover */
-}
+
