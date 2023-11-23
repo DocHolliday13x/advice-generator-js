@@ -21,7 +21,7 @@ body {
   /* margin: 0 auto; */
   /* margin-left: auto;
   margin-right: auto; */
-  position: absolute;
+  position: relative;
   left: 50%;
   top: 50%;
   margin-top: -100px; /* Half of total height */
@@ -56,48 +56,18 @@ body {
 .divider {
   width: 100%;
   height: 1px;
-  background-color: hsl(217, 19%, 35%);
-  margin: 0 10px;
+  background-image: repeating-linear-gradient(to right, hsl(217, 19%, 35%), hsl(217, 19%, 35%) 2px, transparent 2px, transparent 4px);
 }
 
 .button {
   position: absolute;
-  bottom: 20px; /* Position the button at the bottom of the container. Need to adjust the size of container to make button split container and background */
+  bottom: -1; /* Position the button at the bottom of the container. Need to adjust the size of container to make button split container and background */
   left: 50%;
   /* min-height: 100vh; */
   transform: translateX(-50%);
   box-shadow:hsl(150, 100%, 66%); /* This should make the button glow but it's not working */
   transition: all 0.2s ease-in-out;
 }
-
-/* button:hover {
-  background-color: hsl(150, 100%, 66%);
-  box-shadow:hsl(150, 100%, 66%); <-- Was going to add the glow on hover but I can't even get the glow to work at all 
-} */
-
-/* .svg-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: hsl(150, 100%, 66%);
-  color: hsl(218, 23%, 16%);
-  border: none;
-  border-radius: 50%; /* Makes the button circular 
-  padding: 10px;
-  cursor: pointer;
-  font-family: 'Manrope', sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  transition: background-color 0.3s ease;
-}
-
-.svg-button:hover {
-  background-color: hsl(113, 89%, 56%);
-  color: hsl(150, 100%, 66%);
-} */
-
-/* adding note to attempt to merge again, but for reals, fuck my fucking life and this fucking career path */
 
 .svg-button {
   display: flex;
@@ -117,8 +87,10 @@ body {
   box-shadow: 0 0 10px hsl(150, 100%, 66%); /* Add box-shadow effect */
 }
 
+/* Do I need the on hover? Probably not. Will revisit. */
 .svg-button:hover {
   background-color: hsl(150, 100%, 66%);
   color: hsl(150, 100%, 66%);
   box-shadow: 0 0 10px hsl(150, 100%, 66%); /* Update box-shadow effect on hover */
 }
+
