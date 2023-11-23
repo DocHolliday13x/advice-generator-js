@@ -61,11 +61,10 @@ body {
 
 .button {
   position: absolute;
-  bottom: -1; /* Position the button at the bottom of the container. Need to adjust the size of container to make button split container and background */
+  bottom: -1; /* Position the button at the bottom of the container. Negative value placed button lower. Value of -1 works perfectly for now.*/
   left: 50%;
-  /* min-height: 100vh; */
   transform: translateX(-50%);
-  box-shadow:hsl(150, 100%, 66%); /* This should make the button glow but it's not working */
+  box-shadow:hsl(150, 100%, 66%);
   transition: all 0.2s ease-in-out;
 }
 
@@ -87,10 +86,4 @@ body {
   box-shadow: 0 0 10px hsl(150, 100%, 66%); /* Add box-shadow effect */
 }
 
-/* Do I need the on hover? Probably not. Will revisit. */
-.svg-button:hover {
-  background-color: hsl(150, 100%, 66%);
-  color: hsl(150, 100%, 66%);
-  box-shadow: 0 0 10px hsl(150, 100%, 66%); /* Update box-shadow effect on hover */
-}
 
