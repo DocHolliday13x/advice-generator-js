@@ -66,13 +66,14 @@ body {
   left: 50%;
   /* min-height: 100vh; */
   transform: translateX(-50%);
-  box-shadow:hsl(150, 100%, 66%);
+  box-shadow:hsl(150, 100%, 66%); /* This should make the button glow but it's not working */
+  transition: all 0.2s ease-in-out;
 }
 
-button:hover {
+/* button:hover {
   background-color: hsl(150, 100%, 66%);
-  box-shadow:hsl(150, 100%, 66%);
-}
+  box-shadow:hsl(150, 100%, 66%); <-- Was going to add the glow on hover but I can't even get the glow to work at all 
+} */
 
 .svg-button {
   display: flex;
