@@ -62,10 +62,18 @@ body {
 
 .button {
   position: absolute;
-  bottom: 20px;
+  bottom: 20px; /* Position the button at the bottom of the container. Need to adjust the size of container to make button split container and background */
   left: 50%;
+  /* min-height: 100vh; */
   transform: translateX(-50%);
+  box-shadow:hsl(150, 100%, 66%); /* This should make the button glow but it's not working */
+  transition: all 0.2s ease-in-out;
 }
+
+/* button:hover {
+  background-color: hsl(150, 100%, 66%);
+  box-shadow:hsl(150, 100%, 66%); <-- Was going to add the glow on hover but I can't even get the glow to work at all 
+} */
 
 .svg-button {
   display: flex;
@@ -85,6 +93,8 @@ body {
 }
 
 .svg-button:hover {
-  background-color: hsl(193, 38%, 86%);
-  color: hsl(218, 23%, 16%);
+  background-color: hsl(113, 89%, 56%);
+  color: hsl(150, 100%, 66%);
 }
+
+/* I fucked everything up */
