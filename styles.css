@@ -62,7 +62,7 @@ body {
 
 .button {
   position: absolute;
-  bottom: 20px;
+  bottom: 20px; /* Position the button at the bottom of the container. Need to adjust the size of container to make button split container and background */
   left: 50%;
   /* min-height: 100vh; */
   transform: translateX(-50%);
@@ -93,6 +93,6 @@ body {
 }
 
 .svg-button:hover {
-  background-color: hsl(193, 38%, 86%);
-  color: hsl(218, 23%, 16%);
+  background-color: hsl(113, 89%, 56%);
+  color: hsl(150, 100%, 66%);
 }
